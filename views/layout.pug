@@ -6,10 +6,14 @@ html(lang="en")
 		link(rel="stylesheet",type="text/css",href="/styles/index.css")
 
 		
-		title title
+		title= title
 	body
 		include ./static/header.pug
 
-		block page-content
+		main(class="page-content")
+			div(class="page-content-header")
+				h1(class="page-content-header__title") #{heading}
+			div(class="main-content")
+				block page-content
 
 		include ./static/footer.pug

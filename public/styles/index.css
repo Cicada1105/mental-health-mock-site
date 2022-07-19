@@ -1,0 +1,94 @@
+/*
+	Global Styling
+
+	  Table of Contents
+	-----------------------
+
+*/
+
+/**************/
+/*   Global   */
+/**************/
+html,body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	/*box-sizing: content-box;*/
+}
+:root {
+	--font-color: white;
+	--bg-color: gray;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--font-color);
+}
+a:hover {  }
+a:active {  }
+a:visited {  }
+
+/*****************/
+/*   Utilities   */
+/*****************/
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+.flex-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+/**************/
+/*   Header   */
+/**************/
+header.page-header {
+	background-color: var(--bg-color);
+	justify-content: space-between;
+	padding: 0.5rem;
+}
+h2.page-header__title {
+	font-size: 2rem;
+	margin: 0rem;
+	margin-left: 1rem;
+}
+nav.page-navigation {
+	display: inline-block;
+}
+ul.nav-list {
+	justify-content: space-around;
+	margin: 0rem;
+	padding-left: 5rem;
+}
+a.nav-list__link {
+	padding: 0.75rem 1rem;
+}
+a.nav-list__link:hover {
+	background-color: lightgray;
+}
+
+/************/
+/*   Main   */
+/************/
+.page-content-header {
+	background-color: lightgray;
+	width: 100vw;
+	padding: 2rem;
+}
+.main-content {
+	padding: 2rem;
+}
+
+/**************/
+/*   Footer   */
+/**************/
+footer.page-footer {
+	background-color: gray;
+	color: var(--bg-color);
+	padding: 1rem;
+}
