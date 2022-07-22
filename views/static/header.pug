@@ -1,17 +1,9 @@
 header(class="page-header flex-container")
 	h2(class="page-header__title")
 		a(href="/") Home
-	nav(class="page-navigation")
-		ul(class="nav-list flex-container")
-			li(class="nav-list__item")
-				a(class="nav-list__link" href="/find-a-professional") Find a Professional
-			li(class="nav-list__item")
-				a(class="nav-list__link" href="/doctors") Doctor Profiles
-			li(class="nav-list__item")
-				a(class="nav-list__link" href="/forums") Forums
-			li(class="nav-list__item")
-				a(class="nav-list__link" href="/articles") Mental Health Articles
-			li(class="nav-list__item")
-				a(class="nav-list__link" href="/mental-illness-directory") Mental Illness Directory
-			li(class="nav-list__item")
-				a(class="nav-list__link" href="/support") Support
+	include navbar.pug
+	div(class="page-search")
+		form(class="page-search-form" action="/search" method="post")
+			input(class="page-search__input" type="search" placeholder="Search")
+			i(class="fa-solid fa-magnifying-glass")
+			input(type="submit" value="")

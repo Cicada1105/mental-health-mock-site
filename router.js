@@ -8,6 +8,7 @@ Router.get("/",(req,res) => {
 
 	res.send(compiledFile({ title: "Home", heading: "Welcome to the Mental Health website" }))
 });
+// Find a professional main link
 Router.get("/find-a-professional",(req,res) => {
 	const compiledFile = pug.compileFile("./views/find-a-professional.pug");
 
@@ -18,6 +19,12 @@ Router.get("/doctors",(req,res) => {
 
 	res.send(compiledFile({ title: "Doctor Profiles", heading: "Doctor Profiles" }));
 });
+Router.get("/book-appointment",(req,res) => {
+	const compiledFile = pug.compileFile("./views/book-appointment.pug");
+
+	res.send(compiledFile({ title: "Book an Appointment", heading: "Book an Appointment with a Professional Today!" }))
+})
+// Forums main link
 Router.get("/forums",(req,res) => {
 	const compiledFile = pug.compileFile("./views/forums.pug");
 
@@ -28,8 +35,8 @@ Router.get("/articles",(req,res) => {
 
 	res.send(compiledFile({ title: "Mental Health Articles", heading: "Mental Health Articles" }));
 });
-Router.get("/mental-illness-directory",(req,res) => {
-	const compiledFile = pug.compileFile("./views/mental-illness-directory.pug");
+Router.get("/mental-illness-definitions",(req,res) => {
+	const compiledFile = pug.compileFile("./views/mental-illness-definitions.pug");
 
 	res.send(compiledFile({ title: "Mental Illness Directory", heading: "Mental Illness Directory" }));
 });

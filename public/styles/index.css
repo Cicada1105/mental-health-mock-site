@@ -3,21 +3,29 @@
 
 	  Table of Contents
 	-----------------------
-
+	1. GLobal
+	2. Utilities
+	3. Header
+		- Home Title
+		- Primary Navigation
+		- Page Search
 */
 
 /**************/
 /*   Global   */
 /**************/
+* {
+	/*box-sizing: content-box;*/
+}
 html,body {
 	margin: 0px;
 	padding: 0px;
 	font-size: 16px;
-	/*box-sizing: content-box;*/
 }
 :root {
 	--font-color: white;
-	--bg-color: gray;
+	--primary-bg-color: gray;
+	--secondary-bg-color: lightgray;
 }
 li {
 	list-style: none;
@@ -48,15 +56,17 @@ a:visited {  }
 /*   Header   */
 /**************/
 header.page-header {
-	background-color: var(--bg-color);
+	background-color: var(--primary-bg-color);
 	justify-content: space-between;
-	padding: 0.5rem;
+	/*padding: 0.5rem;*/
 }
+/* Home Title */
 h2.page-header__title {
 	font-size: 2rem;
 	margin: 0rem;
 	margin-left: 1rem;
 }
+/* Primary Navigation */
 nav.page-navigation {
 	display: inline-block;
 }
@@ -64,20 +74,68 @@ ul.nav-list {
 	justify-content: space-around;
 	margin: 0rem;
 	padding-left: 5rem;
+	font-size: 1.05rem;
 }
-a.nav-list__link {
-	padding: 0.75rem 1rem;
+li.nav-list-item {
+	position: relative;
 }
-a.nav-list__link:hover {
-	background-color: lightgray;
+a.nav-list__link > i {
+	margin-right: 0.55rem;
 }
-
+li.nav-list-item:hover > ul.subnav-list {
+	display: block;
+}
+a[class $= "nav-list__link"] {
+	padding: 1rem 1.25rem;
+	display: block;
+}
+a[class $= "nav-list__link"]:hover {
+	background-color: var(--secondary-bg-color);
+	color: black;
+}
+ul.subnav-list {
+	background-color: var(--primary-bg-color);
+	position: absolute;
+	text-align: center;
+	padding-left: 0px;
+	display: none;
+	color: black;
+	width: 100%;
+	top: 100%;
+}
+/* Page Search */
+.page-search {
+	margin-right: 1rem;
+}
+.page-search-form {
+	margin: 0px;
+}
+.page-search__input {
+	border-radius: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	font-size: 1rem;
+}
+.page-search__input:focus {
+	outline: none;
+}
+.page-search__input + i {
+	position: relative;
+	right: 1.75rem;
+}
+.page-search input[type="submit"] {
+	background: transparent;
+	position: absolute;
+	border: none;
+	width: 1.25rem;
+	height: 1.25rem;
+	right: 2.625rem;
+	top: 0.45rem;
+}
 /************/
 /*   Main   */
 /************/
 .page-content-header {
-	background-color: lightgray;
-	width: 100vw;
+	background-color: var(--secondary-bg-color);
 	padding: 2rem;
 }
 .main-content {
@@ -88,7 +146,7 @@ a.nav-list__link:hover {
 /*   Footer   */
 /**************/
 footer.page-footer {
-	background-color: gray;
-	color: var(--bg-color);
+	background-color: var(--primary-bg-color);
+	color: var(--secondary-bg-color);
 	padding: 1rem;
 }
