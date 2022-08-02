@@ -1,152 +1,253 @@
 /*
-	Global Styling
+	Home Styling
 
 	  Table of Contents
 	-----------------------
 	1. GLobal
 	2. Utilities
-	3. Header
-		- Home Title
-		- Primary Navigation
-		- Page Search
+	3. Announcements
+	4. Professional Search
+	5. Tools for Coping
+	6. Health Articles
+	7. User Stories
 */
 
 /**************/
 /*   Global   */
 /**************/
-* {
-	/*box-sizing: content-box;*/
+section {
+	padding: 2rem;
 }
-html,body {
-	margin: 0px;
-	padding: 0px;
-	font-size: 16px;
-}
-:root {
-	--font-color: white;
-	--primary-bg-color: gray;
-	--secondary-bg-color: lightgray;
-}
-li {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-	color: var(--font-color);
-}
-a:hover {  }
-a:active {  }
-a:visited {  }
 
 /*****************/
 /*   Utilities   */
 /*****************/
-.flex-container {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;
+
+/*********************/
+/*   Announcements   */
+/*********************/
+section.announcements {
+	background-color: var(--secondary-bg-color);
 }
-.flex-wrapper {
-	display: flex;
-	flex-flow: row wrap;
+.announcement-message {
+	border-right: 2px solid black;
+	display: inline-block;
+	padding-right: 5rem;
+	position: relative;
+	flex: 1 1 0;
+}
+h2.announcement__title {
+	margin-top: 0rem;
+}
+a.announcement__link {
+	background-color: var(--primary-bg-color);
+	border-radius: 0.25rem;
+	padding: 0.35rem 1rem;
+}
+.announcement-infographic {
+	background-image: url("/imgs/hospital.jpeg");
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+	flex: 2 2 0
+}
+.announcement-infographic::after {
+	background-image: linear-gradient(transparent,rgba(0,0,0,.75) 40%,rgba(0,0,0,.8));
+	content: "";
+	position: absolute;
+	height: 12rem;
+	bottom: -6rem;
+	width: 100%;
+}
+.infographic-content {
+	position: absolute;
+	padding: 0rem 3rem;
+	bottom: 5%;
+	z-index: 1;
+	color: var(--font-color);
+}
+.infographic-content > a {
+	text-decoration: underline;
 }
 
-/**************/
-/*   Header   */
-/**************/
-header.page-header {
-	background-color: var(--primary-bg-color);
-	justify-content: space-between;
-	/*padding: 0.5rem;*/
+/***************************/
+/*   Professional Search   */
+/***************************/
+section.professional-search {
+	background-color: cyan;
 }
-/* Home Title */
-h2.page-header__title {
-	font-size: 2rem;
-	margin: 0rem;
-	margin-left: 1rem;
-}
-/* Primary Navigation */
-nav.page-navigation {
-	display: inline-block;
-}
-ul.nav-list {
-	justify-content: space-around;
-	margin: 0rem;
-	padding-left: 5rem;
-	font-size: 1.05rem;
-}
-li.nav-list-item {
-	position: relative;
-}
-a.nav-list__link > i {
-	margin-right: 0.55rem;
-}
-li.nav-list-item:hover > ul.subnav-list {
-	display: block;
-}
-a[class $= "nav-list__link"] {
-	padding: 1rem 1.25rem;
-	display: block;
-}
-a[class $= "nav-list__link"]:hover {
-	background-color: var(--secondary-bg-color);
-	color: black;
-}
-ul.subnav-list {
-	background-color: var(--primary-bg-color);
-	position: absolute;
-	text-align: center;
-	padding-left: 0px;
-	display: none;
-	color: black;
-	width: 100%;
-	top: 100%;
-}
-/* Page Search */
-.page-search {
-	margin-right: 1rem;
-}
-.page-search-form {
-	margin: 0px;
-}
-.page-search__input {
+.search-cont {
+	background-color: white;
+	border: 1px solid black;
 	border-radius: 0.5rem;
+	text-align: center;
+	min-width: 45rem;
+	padding: 1rem;
+	margin: auto;
+	width: 70%;
+}
+.search-cont > form {
+	margin: 0rem;
+}
+label.professional-search__label {
+	margin: 0rem 4rem;
+}
+.search-input-cont {
+	position: relative;
+	width: fit-content;
+	margin: 0rem 4rem;
+	display: inline;
+}
+.search__input {
 	padding: 0.25rem 0.5rem;
 	font-size: 1rem;
+	width: 22rem;
 }
-.page-search__input:focus {
+.search__input:focus {
 	outline: none;
 }
-.page-search__input + i {
+.search__input + i {
 	position: relative;
 	right: 1.75rem;
 }
-.page-search input[type="submit"] {
+.search-input-cont input[type="submit"] {
 	background: transparent;
 	position: absolute;
 	border: none;
 	width: 1.25rem;
 	height: 1.25rem;
-	right: 2.625rem;
-	top: 0.45rem;
-}
-/************/
-/*   Main   */
-/************/
-.page-content-header {
-	background-color: var(--secondary-bg-color);
-	padding: 2rem;
-}
-.main-content {
-	padding: 2rem;
+	right: 7%;
+	top: -8%;
 }
 
-/**************/
-/*   Footer   */
-/**************/
-footer.page-footer {
-	background-color: var(--primary-bg-color);
-	color: var(--secondary-bg-color);
+/************************/
+/*   Tools for Coping   */
+/************************/
+section.tools-for-coping {
+	background-color: lightcyan;
+	text-align: center;
+}
+.coping-tools__title {
+	margin-top: 0rem;
+	margin-bottom: 2rem;
+}
+.tools-for-coping i {
+	font-size: 2rem;
+}
+.tools {
+	display: inline-block;
+	width: calc(100vw - 14rem);
+}
+.tools > div {
+	justify-content: space-around;
+}
+.tool__text {
+	font-size: 1.2rem;
+}
+.more-tools__link {
+	color: black;
+	float: right;
+	width: 5rem;
+}
+.more-tools__link:hover > span {
+	text-decoration: underline;
+}
+.more-tools__link > i {
+	text-align: center;
+	display: block;
+}
+.more-tools__link > span {
+	display: block;
+	margin: 1rem 0rem;
+}
+
+/***********************/
+/*   Health Articles   */
+/***********************/
+section.health-articles {
+	background-color: lightgray;
+}
+.articles {
+	justify-content: center;
+	gap: 2rem;
+}
+article.health-article {
+	background-color: white;
+	position: relative;
+	width: 17rem;
+}
+.article-img {
+	background-color: lightslategray;
+	padding: 2rem;
+	text-align: center;
+}
+.article-img > i {
+	font-size: 5rem;
+}
+.article__preview {
 	padding: 1rem;
+	margin-bottom: 3rem;
+}
+.article__link {
+	position: absolute;
+	margin: 1rem;
+	bottom: 0rem;
+	color: black;
+}
+.article__link:hover {
+	text-decoration: underline;
+}
+
+/********************/
+/*   User Stories   */
+/********************/
+section.patient-testimonies {
+	background-color: lightcoral;
+}
+article.patient-testimony {
+	justify-content: space-around;
+	margin: auto;
+	margin-bottom: 3rem;
+	width: 80%;
+}
+article.patient-testimony:nth-of-type(even) > .testimony {
+	order: -1;
+}
+.patient-img {
+	background-color: lightslategray;
+	padding: 4rem;
+	text-align: center;
+	margin: 0rem 3rem;
+}
+.patient-img > i {
+	font-size: 4rem;
+}
+.testimony {
+	margin: 0rem 3rem;
+}
+div.more-testimonials {
+	position: relative;
+	width: fit-content;
+	margin: auto;
+}
+div.more-testimonials__bg {
+	background-color: black;
+	position: absolute;
+	transition: width 1s;
+	height: 100%;
+	width: 0%;
+	top: 0%;
+	z-index: 0;
+}
+a.more-testimonials__link {
+	transition: background-color 1s;
+	position: relative;
+	border: 1px solid black;
+	display: inline-block;
+	font-size: 1.5rem;
+	padding: 2rem 10rem;
+	z-index: 1;
+}
+a.more-testimonials__link:hover + div.more-testimonials__bg {
+	width: 100%;
 }

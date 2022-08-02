@@ -1,3 +1,72 @@
 extends layout.pug
 
+block page-styles
+	link(rel="stylesheet" type="text/css" href="/styles/index.css")
+
 block page-content
+	// Includes
+	include ./components/health-article.pug
+	section(class="announcements")
+		article(class="flex-wrapper announcement")
+			div(class="announcement-message")
+				h2(class="announcement__title") Hospitals cap patient visits, ask people to avoid ER as staff shortages continue
+				p(class="announcement__preview") Hospital Emergency rooms continue to struggle with staffing shortages and patient influx across the country, prompting one Montreal hospital to ask people to avoid the ER when possible due to overcrowding.
+				a(class="announcement__link" href="") View
+			div(class="announcement-infographic")
+				div(class="infographic-content")
+					h3 Hospitals cap patient visits, ask people to avoid ER as staff shortages continue
+					a(href="") Read Article
+	section(class="professional-search")
+		div(class="search-cont")
+			form(action="" method="post")
+				label(class="profesional-search__label" for="") The Professional Finder Search
+				div(class="search-input-cont")
+					input(class="search__input" type="search" placeholder="Search Symptoms, Location or a Doctor")
+					i(class="fa-solid fa-magnifying-glass")
+					input(type="submit" value="")
+	section(class="tools-for-coping")
+		h2(class="coping-tools__title") Tools for Coping
+		div(class="tools")
+			div(class="flex-container")
+				div(class="tool")
+					i(class="fa-solid fa-person-running")
+					p(class="tool__text") Exercise
+				div(class="tool")
+					i(class="fa-solid fa-book")
+					p(class="tool__text") Journaling
+				div(class="tool")
+					i(class="fa-solid fa-utensils")
+					p(class="tool__text") Diet
+				div(class="tool")
+					i(class="fa-solid fa-paintbrush")
+					p(class="tool__text") Hobbies
+		a(class="more-tools__link" href="")
+				i(class="fa-solid fa-angle-right")
+				span View More
+	section(class="health-articles")
+		h2(class="health-articles__title") Mental Health Today
+		div(class="flex-wrapper articles")
+			+article("Article Preview Lorem ipsum dolor sit amet, consectetur adipiscing elit.","")
+			+article("Article Preview Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.","")
+			+article("Article Preview Lorem ipsum dolor sit amet","")
+			+article("Article Preview Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","")
+	section(class="patient-testimonies")
+		h2(class="patient-testimonies__title") Patient Testimonies
+		article(class="flex-wrapper patient-testimony")
+			div(class="patient-img")
+				i(class="fa-solid fa-image")
+			div(class="testimony")
+				- var text = "Jenny's Story";
+				h3(class="patient") #{text}
+				p(class="testimony__text")
+		article(class="flex-wrapper patient-testimony")
+			div(class="patient-img")
+				i(class="fa-solid fa-image")
+			div(class="testimony")
+				- text = "David's Story";
+				h3(class="patient") #{text}
+				p(clss="testimony__text")
+		footer(class="testimonials-footer")
+			div(class="more-testimonials")
+				a(href="/" class="more-testimonials__link") Read More Stories
+				div(class="more-testimonials__bg")
