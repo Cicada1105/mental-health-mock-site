@@ -24,8 +24,10 @@ html,body {
 }
 :root {
 	--font-color: white;
-	--primary-bg-color: gray;
-	--secondary-bg-color: lightgray;
+	--primary-color: #DAEEEE;
+	--secondary-color: #214F54;
+	--bg-color: white;
+	--secondary-bg-color: black;
 }
 li {
 	list-style: none;
@@ -56,15 +58,16 @@ a:visited {  }
 /*   Header   */
 /**************/
 header.page-header {
-	background-color: var(--primary-bg-color);
+	background-color: var(--secondary-color);
 	justify-content: space-between;
 	/*padding: 0.5rem;*/
 }
 /* Home Title */
 h2.page-header__title {
+	background-color: var(--secondary-bg-color);
+	padding: 0.45rem 1rem;
 	font-size: 2rem;
 	margin: 0rem;
-	margin-left: 1rem;
 }
 /* Primary Navigation */
 nav.page-navigation {
@@ -90,11 +93,11 @@ a[class $= "nav-list__link"] {
 	display: block;
 }
 a[class $= "nav-list__link"]:hover {
-	background-color: var(--secondary-bg-color);
+	background-color: var(--secondary-color);
 	color: black;
 }
 ul.subnav-list {
-	background-color: var(--primary-bg-color);
+	background-color: var(--primary-color);
 	position: absolute;
 	text-align: center;
 	padding-left: 0px;
@@ -142,7 +145,7 @@ main.page-content {
 	padding: 2rem;
 }
 .page-content-header {
-	background-color: var(--secondary-bg-color);
+	background-color: var(--secondary-color);
 	padding: 2rem;
 }
 
@@ -150,7 +153,7 @@ main.page-content {
 /*   Footer   */
 /**************/
 footer.page-footer {
-	background-color: var(--primary-bg-color);
-	color: var(--secondary-bg-color);
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
 	padding: 1rem;
 }

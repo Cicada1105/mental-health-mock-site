@@ -27,7 +27,7 @@ section {
 /*   Announcements   */
 /*********************/
 section.announcements {
-	background-color: var(--secondary-bg-color);
+	background-color: var(--primary-color);
 }
 .announcement-message {
 	border-right: 2px solid black;
@@ -40,7 +40,7 @@ h2.announcement__title {
 	margin-top: 0rem;
 }
 a.announcement__link {
-	background-color: var(--primary-bg-color);
+	background-color: var(--secondary-color);
 	border-radius: 0.25rem;
 	padding: 0.35rem 1rem;
 }
@@ -74,7 +74,7 @@ a.announcement__link {
 /*   Professional Search   */
 /***************************/
 section.professional-search {
-	background-color: cyan;
+	/*background-color: cyan;*/
 }
 .search-cont {
 	background-color: white;
@@ -124,7 +124,7 @@ label.professional-search__label {
 /*   Tools for Coping   */
 /************************/
 section.tools-for-coping {
-	background-color: lightcyan;
+	background-color: var(--primary-color);
 	text-align: center;
 }
 .coping-tools__title {
@@ -165,7 +165,7 @@ section.tools-for-coping {
 /*   Health Articles   */
 /***********************/
 section.health-articles {
-	background-color: lightgray;
+	/*background-color: lightgray;*/
 }
 .articles {
 	justify-content: center;
@@ -202,7 +202,7 @@ article.health-article {
 /*   User Stories   */
 /********************/
 section.patient-testimonies {
-	background-color: lightcoral;
+	background-color: var(--primary-color);
 }
 article.patient-testimony {
 	justify-content: space-around;
