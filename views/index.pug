@@ -4,7 +4,7 @@ block page-styles
 	link(rel="stylesheet" type="text/css" href="/styles/index.css")
 
 block page-content
-	// Includes
+	//- Includes
 	include ./components/health-article.pug
 	section(class="announcements")
 		article(class="flex-wrapper announcement")
@@ -18,55 +18,64 @@ block page-content
 					a(href="") Read Article
 	section(class="professional-search")
 		div(class="search-cont")
+			article(class="search-info")
+				h3(class="search-info__header") Find a Professional
+				p(class="search-info__text") Begin by searching for a mental healthcare professional who meets your exact requirements. Input your needs and details and search through our list of over 2000 registered experts.
 			form(action="" method="post")
-				label(class="profesional-search__label" for="") The Professional Finder Search
+				label(class="professional-search__label" for="") The Professional Finder Search
 				div(class="search-input-cont")
+					i(class="search-icon fa-solid fa-magnifying-glass")
 					input(class="search__input" type="search" placeholder="Search Symptoms, Location or a Doctor")
-					i(class="fa-solid fa-magnifying-glass")
 					input(type="submit" value="")
 	section(class="tools-for-coping")
 		h2(class="coping-tools__title") Tools for Coping
 		div(class="tools")
 			div(class="flex-container")
 				div(class="tool")
-					i(class="fa-solid fa-person-running")
+					//- i(class="fa-solid fa-person-running")
+					img(class="tool__icon" src="/imgs/exercise-icon.svg" alt="Exercise Icon")
 					p(class="tool__text") Exercise
 				div(class="tool")
-					i(class="fa-solid fa-book")
+					//- i(class="fa-solid fa-book")
+					img(class="tool__icon" src="/imgs/journaling-icon.svg" alt="Journaling Icon")
 					p(class="tool__text") Journaling
 				div(class="tool")
-					i(class="fa-solid fa-utensils")
+					//- i(class="fa-solid fa-utensils")
+					img(class="tool__icon" src="/imgs/diet-icon.svg" alt="Dieting Icon")
 					p(class="tool__text") Diet
 				div(class="tool")
-					i(class="fa-solid fa-paintbrush")
-					p(class="tool__text") Hobbies
+					//- i(class="fa-solid fa-paintbrush")
+					img(class="tool__icon" src="/imgs/meditation-icon.svg" alt="Meditation Icon")
+					p(class="tool__text") Meditation
 		a(class="more-tools__link" href="")
 				i(class="fa-solid fa-angle-right")
 				span View More
 	section(class="health-articles")
 		h2(class="health-articles__title") Mental Health Today
 		div(class="flex-wrapper articles")
-			+article("Article Preview Lorem ipsum dolor sit amet, consectetur adipiscing elit.","")
-			+article("Article Preview Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.","")
-			+article("Article Preview Lorem ipsum dolor sit amet","")
-			+article("Article Preview Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","")
+			+article("The Importance of Prioritizing Mental Health ",{ src: "/imgs/health_articles/article_1.png", alt: "Article 1 Image" })
+			+article("Living with Bipolar Disorder: How to Navigate Major Changes in Mood",{ src: "/imgs/health_articles/article_2.png", alt: "Article 2 Image" })
+			+article("Refusing Treatment: How to Help a Loved one Who Doesn’t Want Help",{ src: "/imgs/health_articles/article_3.png", alt: "Article 3 Image" })
+			+article("Depression and its Role in Our Emotional Landscape",{ src: "/imgs/health_articles/article_4.png", alt: "Article 4 Image" })
 	section(class="patient-testimonies")
 		h2(class="patient-testimonies__title") Patient Testimonies
 		article(class="flex-wrapper patient-testimony")
-			div(class="patient-img")
-				i(class="fa-solid fa-image")
+			//- div(class="testimony__empty-img")
+			//- 	i(class="fa-solid fa-image")
+			img(class="testimony__img" src="imgs/testimonies/jenny.png" alt="Jenny Profile Image")
 			div(class="testimony")
 				- var text = "Jenny's Story";
 				h3(class="patient") #{text}
-				p(class="testimony__text")
+				p(class="testimony__text") Jenn has been dealing with bipolar disorder for nearly 7 years. Her first therapist misdiagnosed her which had an extreme effect on her understanding of what therapy could offer her. Learn about her personal story, her new outlook on treatment and how she found the right kind of care.
 		article(class="flex-wrapper patient-testimony")
-			div(class="patient-img")
-				i(class="fa-solid fa-image")
+			//- div(class="patient-img")
+			//- 	i(class="fa-solid fa-image")
+			img(class="testimony__img" src="imgs/testimonies/david.png" alt="David Profile Image")
 			div(class="testimony")
 				- text = "David's Story";
 				h3(class="patient") #{text}
-				p(clss="testimony__text")
+				p(clss="testimony__text") David was recently diagnosed with schizophrenia. For 3 years, he suffered in silence and explains how his diagnosed has changed his life. He outlines his journey and the improvements he’s experiencing from getting proper treatment. Learn about the characteristics of schizophrenia and what your options are after being diagnosed. 
 		footer(class="testimonials-footer")
-			div(class="more-testimonials")
-				a(href="/" class="more-testimonials__link") Read More Stories
-				div(class="more-testimonials__bg")
+			div(class="wrapper")
+				div(class="more-testimonials")
+					a(href="/" class="more-testimonials__link")

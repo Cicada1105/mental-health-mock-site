@@ -24,26 +24,31 @@ Router.get("/book-appointment",(req,res) => {
 
 	res.send(compiledFile({ title: "Book an Appointment" }))
 })
-// Forums main link
-Router.get("/forums",(req,res) => {
-	const compiledFile = pug.compileFile("./views/forums.pug");
+Router.get("/mental-illness-conditions",(req,res) => {
+	const compiledFile = pug.compileFile("./views/mental-illness-conditions.pug");
 
-	res.send(compiledFile({ title: "Forums" }));
+	res.send(compiledFile({ title: "Mental Illness Directory" }));
 });
 Router.get("/articles",(req,res) => {
 	const compiledFile = pug.compileFile("./views/articles.pug");
 
 	res.send(compiledFile({ title: "Mental Health Articles" }));
 });
-Router.get("/mental-illness-definitions",(req,res) => {
-	const compiledFile = pug.compileFile("./views/mental-illness-definitions.pug");
+// Forums main link
+Router.get("/community",(req,res) => {
+	const compiledFile = pug.compileFile("./views/community.pug");
 
-	res.send(compiledFile({ title: "Mental Illness Directory" }));
+	res.send(compiledFile({ title: "Psycare Community" }));
 });
-Router.get("/support",(req,res) => {
-	const compiledFile = pug.compileFile("./views/support.pug");
+Router.get("/learn-to-cope",(req,res) => {
+	const compiledFile = pug.compileFile("./views/learn-to-cope.pug");
 
-	res.send(compiledFile({ title: "Support" }));
-})
+	res.send(compiledFile({ title: "Learn to Cope" }));
+});
+Router.get("/about-us", (req,res) => {
+	const compiledFile = pug.compileFile("./views/about-us.pug");
+
+	res.send(compiledFile({ title: "About Us" }));
+});
 
 module.exports = Router;

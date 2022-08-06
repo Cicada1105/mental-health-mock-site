@@ -1,6 +1,7 @@
-mixin article(previewText,link)
+mixin article(previewText, img)
 	article(class="health-article")
-		div(class="article-img")
-			i(class="fa-solid fa-image")
+		//- div(class="article-blank-img")
+		//- 	i(class="fa-solid fa-image")
+		img(class="article-img" src=img.src, alt=img.alt)
 		p(class="article__preview")= previewText
-		a(class="article__link" href=link) Read Article
+		//- a(class="article__link" href=link) Read Article

@@ -1,6 +1,8 @@
 header(class="page-header flex-container")
-	h2(class="page-header__title")
-		a(href="/") Home
+	div(class="page-header-title")
+		a(href="/") 
+			img(src="/imgs/logo.svg")
+			h2(class="page-header__title") Psycare
 	include navbar.pug
 	div(class="page-search")
 		form(class="page-search-form" action="/search" method="post")
