@@ -1,0 +1,154 @@
+/*
+	Home Styling
+
+	  Table of Contents
+	-----------------------
+	1. GLobal
+	2. Utilities
+	3. Map
+	4. Find Professional
+		- Search Bar
+		- Symptoms
+		- Secondary Filters
+			+ Online/In Person
+			+ Distance
+*/
+
+/**************/
+/*   Global   */
+/**************/
+section.find-professional-section {
+	justify-content: space-around;
+}
+section.find-professional-section > div {
+	text-align: center;
+	flex: 1 0 0;
+}
+
+/*****************/
+/*   Utilities   */
+/*****************/
+
+
+/***********/
+/*   Map   */
+/***********/
+
+
+/*************************/
+/*   Find Professional   */
+/*************************/
+/* Search Bar */
+form.professional-search__form {
+	margin: 0rem;
+}
+label.professional-search__label {
+	display: none;
+	/*margin: 0rem 4rem;*/
+}
+.search-input-cont {
+	position: relative;
+	width: fit-content;
+	display: inline;
+}
+.search__input {
+	padding: 0.25rem 0.5rem 0.25rem 2rem;
+	border: 2px solid var(--secondary-color);
+	border-radius: 2rem;
+	font-size: 1rem;
+	width: 80%;
+}
+.search__input:focus {
+	outline: none;
+}
+i.search-icon {
+	position: relative;
+	left: 1.75rem;
+}
+.search-input-cont input[type="submit"] {
+	background: transparent;
+	position: absolute;
+	border: none;
+	width: 1.25rem;
+	height: 1.25rem;
+	right: 7%;
+	top: -8%;
+}
+/* Symptoms */
+.symptoms {
+	margin: 2rem auto;
+	justify-content: space-between;
+	width: 80%;
+}
+.symptom {
+	position: relative;
+	width: min-content;
+}
+.symptom__label {
+	border: 2px solid var(--primary-color);
+	border-radius: 2rem;
+	padding: 0.5rem;
+}
+.symptom__label:hover {
+	cursor: pointer;
+}
+.symptom__input {
+	display: none;
+}
+.symptom__input:checked + label {
+	background-color: var(--primary-color);
+}
+/* Secondary Filters */
+.secondary-filters {
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.secondary-filters > div {
+	flex: 1 0 0;
+}
+
+/*Online/In Person*/
+.mode-of-administration {
+	justify-content: space-around;
+}
+
+/*Distance*/
+.distance {
+	margin: 2rem auto;
+}
+.distance__label {
+	text-align: center;
+}
+.distance__input {
+	position: relative;
+	display: block;
+	margin: auto;
+	margin-top: 1rem;
+	width: 60%;
+}
+.distance__input::before {
+	position: absolute;
+	content: "0km";
+	font-size: 0.9rem;
+	top: 1rem;
+}
+.distance__input::after {
+	position: absolute;
+	content: "300km";
+	font-size: 0.9rem;
+	right: 0rem;
+	top: 1rem;
+}
+
+/* Search Button */
+.search-btn {
+	display: inline-block;
+	padding: 0.75rem 3rem;
+	border: 2px solid var(--secondary-color);
+	border-radius: 2rem;
+	margin-top: 2.5rem;
+}
+.search-btn:hover {
+	background-color: var(--secondary-color);
+	color: white;
+}

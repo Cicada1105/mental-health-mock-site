@@ -1,3 +1,52 @@
 extends layout.pug
 
+block page-styles
+	link(rel="stylesheet" type="text/css" href="styles/find-professional.css")
+
 block page-content
+	include ./components/professional-card.pug
+	section(class="flex-wrapper find-professional-section")
+		div(class="professional-map")
+			img(class="professional-map__img" src="imgs/find-professional/map.png" alt="Google Map of Location of Professionals")
+		div(class="professional-search")
+			h1 Find a Professional
+			form(class="professional-search__form" action="" method="post" oninput="distance__output.value = parseInt(officeDistance.value) + 'km'")
+				div
+					label(class="professional-search__label" for="") The Professional Finder Search
+					div(class="search-input-cont")
+						i(class="search-icon fa-solid fa-magnifying-glass")
+						input(class="search__input" type="search" placeholder="Search Symptoms, Location or a Doctor")
+						input(type="submit" value="")
+				div(class="flex-container symptoms")
+					div(class="symptom")
+						input(id="depression-symptom" class="symptom__input" type="checkbox" name="symptoms" value="depression")
+						label(class="symptom__label" for="depression-symptom") Depression
+					div(class="symptom")
+						input(id="anxiety-symptom" class="symptom__input" type="checkbox" name="symptoms" value="anxiety")
+						label(class="symptom__label" for="anxiety-symptom") Anxiety
+					div(class="symptom")
+						input(id="adhd-symptom" class="symptom__input" type="checkbox" name="symptoms" value="adhd")
+						label(class="symptom__label" for="adhd-symptom") ADHD
+					div(class="symptom")
+						input(id="addiction-symptom" class="symptom__input" type="checkbox" name="symptoms" value="addiction")
+						label(class="symptom__label" for="addiction-symptom") Addiction
+				div(class="flex-container secondary-filters")
+					div
+						div(class="flex-container mode-of-administration")
+							div
+								input(id="online-mode" class="mode__input" type="radio" name="mode" value="online")
+								label(for="online-mode" class="mode__label") Online
+							div
+								input(id="in-person-mode" class="mode__input" type="radio" name="mode" value="in-person")
+								label(for="in-person-mode" class="mode_label") In-person
+						div(class="distance")
+							label(for="office-distance" class="distance__label") Distance:
+							output(name="distance__output" for="office-distance") 150km
+							input(id="office-distance" name="officeDistance" class="distance__input" type="range" min="1" max="300" value="150")
+					div
+						select(type="select" name="price-range")
+							option(value="" disabled selected) Price Range
+							option(value="bracket_1") $0 - $49 / Session
+							option(value="bracket_2") $50 - $99 / Session
+							option(value="bracket_3") $100 - $149 / Session
+				a(class="search-btn" href="/find-a-professional/result") Search
