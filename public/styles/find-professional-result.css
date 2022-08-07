@@ -1,0 +1,101 @@
+/*
+	Home Styling
+
+	  Table of Contents
+	-----------------------
+	1. GLobal
+	2. Utilities
+	3. Map
+	4. Find Professional
+		- Search Bar
+		- Symptoms
+		- Secondary Filters
+			+ Online/In Person
+			+ Distance
+*/
+
+/**************/
+/*   Global   */
+/**************/
+section.find-professional-section {
+	justify-content: space-around;
+}
+section.find-professional-section > div {
+	text-align: center;
+	flex: 1 0 0;
+}
+
+/* Search Button */
+.clear-search__link {
+	display: inline-block;
+	padding: 0.75rem 3rem;
+	border: 2px solid var(--secondary-color);
+	border-radius: 2rem;
+	margin-top: 1rem;
+}
+.clear-search__link:hover {
+	background-color: var(--secondary-color);
+	color: white;
+}
+
+.search-params {
+	margin: 2rem auto;
+}
+.search-params__text {
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 1rem;
+}
+.search__result {
+	background-color: var(--secondary-color);
+	color: white;
+	padding: 0.5rem 2rem;
+	border-radius: 2rem;
+	margin: 0rem 1rem;
+}
+
+/**************************/
+/*   Professional Cards   */
+/**************************/
+.professional-card {
+	background-color: var(--primary-color);
+	box-shadow: 2px 2px 4px rgba(0,0,0,25);
+	border-radius: 2rem;
+	padding: 1.5rem;
+	margin: 1.5rem;
+}
+.professional-card > hgroup {
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+.professional__name {
+	margin: 0rem;
+}
+.professional__wage {
+	margin: 0rem;
+}
+/* About Professional */
+.professional__img {
+	flex: 1 0 0;
+}
+.description-cont {
+	flex: 3 0 0;
+}
+.description__text {
+	text-align: justify;
+	padding: 0rem 1rem;
+}
+.professional-links {
+	justify-content: space-around;
+}
+.professional__link {
+	background-color: white;
+	padding: 0.5rem 0.75rem;
+	border: 2px solid var(--secondary-color);
+	box-shadow: 1px 1px 2px var(--secondary-color);
+	border-radius: 2rem;
+}
+.professional__link:hover {
+	background-color: var(--secondary-color);
+	color: white;
+}

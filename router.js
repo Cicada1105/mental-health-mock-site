@@ -14,6 +14,11 @@ Router.get("/find-a-professional",(req,res) => {
 
 	res.send(compiledFile({ title: "Find a Professional" }));
 });
+Router.get("/find-a-professional/result", (req,res) => {
+	const compiledFile = pug.compileFile("./views/find-a-professional-result.pug");
+
+	res.send(compiledFile({ title: "Find a Professional" }));
+})
 Router.get("/doctors",(req,res) => {
 	const compiledFile = pug.compileFile("./views/doctors.pug");
 

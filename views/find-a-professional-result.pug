@@ -1,0 +1,23 @@
+extends layout.pug
+
+block page-styles
+	link(rel="stylesheet" type="text/css" href="/styles/find-professional-result.css")
+
+block page-content
+	include ./components/professional-card.pug
+	section(class="flex-wrapper find-professional-section")
+		div(class="professional-map")
+			img(class="professional-map__img" src="/imgs/find-professional/map.png" alt="Google Map of Location of Professionals")
+		div(class="professional-search-result")
+			h1 Find a Professional
+			a(class="clear-search__link" href="/find-a-professional") Clear Search
+
+			div(class="search-params")
+				p(class="search-params__text") Search Results:
+				span(class="search__result") Anxiety
+				span(class="search__result") Online
+				span(class="search__result") $100-$149
+
+			+professionalCard("Dr. Stacey Thomas", { src: "/imgs/professionals/stacey.png", alt: "Dr. Stacey Thomas Profile Picture" }, "Hi! My name is Stacey Thomas. I am a registered Psychotherapist with the CRPO and I offer online video counselling sessions. I will provide a safe space for you to share your story. Together we will understand where you are now and most importantly where you want to be. ","100")
+			+professionalCard("Dr. James Schwab", { src: "/imgs/professionals/james.png", alt: "Dr. James Schwab Profile Picture" }, "I am a registered psychotherapist who received a PHD from the University of Toronto where I specialized in anxiety and depressive disorders. I have couselled over 600 patients over my 20-year long career and will be pleased to discuss any mental health issues you may currently be experiencing.", "115")
+			+professionalCard("Dr. Robin Beardsley", { src: "/imgs/professionals/robin.png", alt: "Dr. Robin Beardsley Profile Picture" }, "Robin Beardsley MD, CCFP is a family physician practicing in psychotherapy with over 25 years’ experience. She graduated from the University of Toronto and then completed her Family Medicine program at the University of Ottawa.", "120")

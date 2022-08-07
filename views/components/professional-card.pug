@@ -1,2 +1,12 @@
-mixin professionalCard(info)
+mixin professionalCard(name,img,description,amount)
 	article(class="professional-card")
+		hgroup(class="flex-wrapper")
+			h3(class="professional__name")= name
+			h4(class="professional__wage") $#{amount} / Session
+		div(class="flex-container about-professional")
+			img(class="professional__img" src=img.src alt=img.alt)
+			div(class="description-cont")
+				p(class="description__text")= description
+				div(class="flex-container professional-links")
+					a(class="professional__link" href="./") Learn More
+					a(class="professional__link" href="/book-appointment") Book Appointment

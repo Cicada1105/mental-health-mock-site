@@ -1,13 +1,12 @@
 extends layout.pug
 
 block page-styles
-	link(rel="stylesheet" type="text/css" href="styles/find-professional.css")
+	link(rel="stylesheet" type="text/css" href="/styles/find-professional.css")
 
 block page-content
-	include ./components/professional-card.pug
 	section(class="flex-wrapper find-professional-section")
 		div(class="professional-map")
-			img(class="professional-map__img" src="imgs/find-professional/map.png" alt="Google Map of Location of Professionals")
+			img(class="professional-map__img" src="/imgs/find-professional/map.png" alt="Google Map of Location of Professionals")
 		div(class="professional-search")
 			h1 Find a Professional
 			form(class="professional-search__form" action="" method="post" oninput="distance__output.value = parseInt(officeDistance.value) + 'km'")
