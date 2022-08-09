@@ -41,6 +41,7 @@ h2.announcement__title {
 }
 a.announcement__link {
 	background-color: var(--secondary-color);
+	color: white;
 	border-radius: 0.25rem;
 	padding: 0.35rem 1rem;
 }

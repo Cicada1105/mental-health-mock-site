@@ -1,0 +1,75 @@
+extends layout.pug
+
+block page-styles
+	link(rel="stylesheet" type="text/css" href="/styles/professional-details.css")
+
+block page-content
+	div(class="profile-banner")
+		div(class="banner")
+		img(class="profile__img" src="/imgs/professionals/james.png" alt="Dr. James Schwab Profile Picture")
+	div(class="flex-container profile-preview")
+		div(class="preview-left")
+			div
+				hgroup
+					h2(class="profile__name") Dr. Schwab
+					h3(class="profile__profession") Psychologist
+				div(ratings)
+			div(class="tags")
+				p(class="tag") Depression
+				p(class="tag") Abuse
+				p(class="tag") Anxiety
+				p(class="tag") Trauma/PTSD
+			p(class="location") 243 North York, Toronto, ON
+			div(class="profile-preview-video")
+				div(class="play-btn")
+					i(class="fa-solid fa-play")
+				p(class="video-preview__text") Play Introduction Video	
+		div(class="preview-right")
+			a(href="./") Message Me
+			a(href="/book-appointment") Book an Appointment
+	section(class="profile-bg")
+		p Dr. Schwab is a Registered Psychologist specializing in assessment and therapy for children, youth and adults experiencing developmental, learning, emotional, and behaviour problems. He also provides family therapy and consultation to schools. He works from an integrative perspective, drawing from cognitive behavioural, family systems, mindfulness-based, and Aboriginal focusing-oriented approaches. Rick also works as a sub-investigator and research therapist for an international multi-site study of post-traumatic stress. He formerly worked as a structural engineer.
+	section(class="profile-education")
+		h2(class="education__title") Education
+		p I earned my doctorate in Counselling Psychology from Andrews University in Michigan. I grew up on Vancouver Island and wanted to return to the area so completed my internship at Simon Fraser University and have lived in the area ever since. Upon completing my internship, I continued working at Simon Fraser University’s Counselling Centre for an additional 5 years. My experience in the area also includes being in private practice since 1995 working with the broad range of concerns that face adults whether that be in the area of relationship(s) or personal concerns. In the past, you may have seen the column I wrote called Mind Matters, in the local paper, the Tri-City News.
+	section(class="profile-approach")
+		h2(class="approach__title") My Approach
+		p I am trained in a variety of methods from Cognitive Behavioral strategies, to Body-Centred therapies, Trauma Oriented approaches (EMDR), Psychodynamic, Person-Oriented and Relationship perspectives, and some of the newer “power” centred therapies that can work faster and deeper than some of the traditional talk therapies.  The centre where I work also has other health care professionals who can be of help if appropriate. 
+		p However, I believe that the best approach is one that fits for you.  Usually a first session involves getting to know you and hearing about whatever is bothering you.  From there, I usually provide some feedback on how we could work and some ideas for change. 
+	section(class="clinic-photos")
+		h2(class="clinic-photos__title") Photo's of the Clinic
+		div(class="flex-container")
+			img(src="/imgs/professional-details/clinic-photo-1.png" alt="photo1")
+			img(src="/imgs/professional-details/clinic-photo-2.png" alt="photo2")
+			img(src="/imgs/professional-details/clinic-photo-3.png" alt="photo3")
+	section(class="profile-reviews")
+		h2(class="profile-reviews__title") Reviews
+		article(class="review-article")
+			div(class="profile-picture")
+				p N
+			div(class="review")
+				h3(class="review__title") Natalia Titova
+				p 2 Reviews - 2 Photos
+				div(class="rating")
+					div(class="stars")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+					p 2 Months Ago
+				p(class="review__text") Dr. Schwab has been incredible!  For the first time in YEARS my son is coming home from school with a smile on his face! We are still in shock! After so many years of issues at school and behavior troubles we finally have answers and solutions.
+		article(class="review-article")
+			div(class="profile-picture")
+				p J
+			div(class="review")
+				h3(class="review__title") Jessie Perry
+				p 2 Reviews
+				div(class="rating")
+					div(class="stars")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+						i(class="fa-solid fa-star")
+					p 3 Months Ago
+				p(class="review__text") Dr. Schwab’s workshop is the best therapy I have ever had for my son (10 yo), and I tried quite a few, unsuccessfully. He was able to change his attitude and his outlook. He is just a wonderful boy - kind and gentle. Complete turn around. No more problems. 

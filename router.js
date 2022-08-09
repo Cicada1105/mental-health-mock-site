@@ -18,7 +18,12 @@ Router.get("/find-a-professional/result", (req,res) => {
 	const compiledFile = pug.compileFile("./views/find-a-professional-result.pug");
 
 	res.send(compiledFile({ title: "Find a Professional" }));
-})
+});
+Router.get("/professional-details", (req,res) => {
+	const compiledFile = pug.compileFile("./views/professional-details.pug");
+
+	res.send(compiledFile({ title: "Professional Details" }));
+});
 Router.get("/doctors",(req,res) => {
 	const compiledFile = pug.compileFile("./views/doctors.pug");
 
@@ -27,7 +32,7 @@ Router.get("/doctors",(req,res) => {
 Router.get("/book-appointment",(req,res) => {
 	const compiledFile = pug.compileFile("./views/book-appointment.pug");
 
-	res.send(compiledFile({ title: "Book an Appointment" }))
+	res.send(compiledFile({ title: "Book an Appointment" }));
 })
 Router.get("/mental-illness-conditions",(req,res) => {
 	const compiledFile = pug.compileFile("./views/mental-illness-conditions.pug");
