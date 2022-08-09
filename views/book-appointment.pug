@@ -1,3 +1,98 @@
 extends layout.pug
 
+block page-scripts
+	include ../public/scripts/book-appointment.js
+
+block page-styles
+	link(rel="stylesheet" type="text/css" href="/styles/book-appointment.css")
+
 block page-content
+	div(class="profile-banner")
+		div(class="banner")
+		img(class="profile__img" src="/imgs/professionals/james.png" alt="Dr. James Schwab Profile Picture")
+	div(class="flex-container profile-preview")
+		div(class="preview-left")
+			div
+				hgroup
+					h2(class="profile__name") Dr. Schwab
+					h3(class="profile__profession") Psychologist
+				div(ratings)
+			div(class="tags")
+				p(class="tag") Depression
+				p(class="tag") Abuse
+				p(class="tag") Anxiety
+				p(class="tag") Trauma/PTSD
+			p(class="location") 243 North York, Toronto, ON
+
+	section(class="book-appointment-section")
+		h2(class="book-appointment__title") Book an Appointment
+		section(class="appointment-booking")
+			div(class="flex-container appointment-date-range")
+				i(class="fa-solid fa-chevron-left")
+				h3(class="date-range__title") July 24 - July 30
+				i(class="fa-solid fa-chevron-right")
+			div(class="flex-container week-days")
+				div(class="week-day")
+					p(class="week-day__title") Sunday 24
+					p(class="time-slot available" onclick="handleClick.call(this)") 9:00am
+					p(class="time-slot") 10:00am
+					p(class="time-slot") 11:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 12:00pm
+					p(class="time-slot") 1:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 2:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 3:00pm
+				div(class="week-day")
+					p(class="week-day__title") Monday 25
+					p(class="time-slot available"  onclick="handleClick.call(this)") 9:00am
+					p(class="time-slot") 10:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 11:00am
+					p(class="time-slot") 12:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 1:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 2:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 3:00pm
+				div(class="week-day")
+					p(class="week-day__title") Tuesday 26
+					p(class="time-slot") 9:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 10:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 11:00am
+					p(class="time-slot") 12:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 1:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 2:00pm
+					p(class="time-slot") 3:00pm
+				div(class="week-day")
+					p(class="week-day__title") Wednesday 27
+					p(class="time-slot available"  onclick="handleClick.call(this)") 9:00am
+					p(class="time-slot") 10:00am
+					p(class="time-slot") 11:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 12:00pm
+					p(class="time-slot") 1:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 2:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 3:00pm
+				div(class="week-day")
+					p(class="week-day__title") Thursday 28
+					p(class="time-slot available"  onclick="handleClick.call(this)") 9:00am
+					p(class="time-slot") 10:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 11:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 12:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 1:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 2:00pm
+					p(class="time-slot") 3:00pm
+				div(class="week-day")
+					p(class="week-day__title") Friday 29
+					p(class="time-slot") 9:00am
+					p(class="time-slot") 10:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 11:00am
+					p(class="time-slot available"  onclick="handleClick.call(this)") 12:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 1:00pm
+					p(class="time-slot") 2:00pm
+					p(class="time-slot available"  onclick="handleClick.call(this)") 3:00pm
+				div(class="week-day")
+					p(class="week-day__title") Saturday 30
+					p(class="time-slot") 9:00am
+					p(class="time-slot") 10:00am
+					p(class="time-slot") 11:00am
+					p(class="time-slot") 12:00pm
+					p(class="time-slot") 1:00pm
+					p(class="time-slot") 2:00pm
+					p(class="time-slot") 3:00pm
+		a(class="book-appointment__link" href="/") Book an Appointment

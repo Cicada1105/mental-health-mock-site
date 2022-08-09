@@ -1,0 +1,102 @@
+
+.profile-banner {
+	position: relative;
+	left: -2rem;
+	width: 100vw;
+}
+.banner {
+	background-color: #ACD8DA;
+	width: 100vw;
+	height: 10rem;
+	z-index: -1;
+}
+.profile__img {
+	position: absolute;
+	width: 10rem;
+	height: 10rem;
+	top: 50%;
+	left: 2.5rem;
+	border-radius: 50%;
+}
+.profile-preview {
+	margin-top: 5rem;
+	justify-content: space-between;
+}
+p.tag {
+	color: #4A9799;
+	font-weight: bold;
+	display: inline;
+	margin: 0rem 0.5rem;
+}
+p.tag:first-of-type {
+	margin-left: 0rem;
+}
+p.location {
+	color: #4BC6B9;
+	font-weight: bold;
+}
+
+/***************************/
+/*   Appointment Booking   */
+/***************************/
+.book-appointment-section {
+	text-align: center;
+	padding: 0.5rem;
+	margin: auto;
+	width: 80vw;
+}
+.book-appointment__title {
+	color: #2E6E70;
+}
+.appointment-booking {
+	background-color: #e1f1f1;
+	padding: 1rem;
+	border-radius: 1.5rem;
+}
+.appointment-date-range {
+	justify-content: space-between;
+	padding: 0rem 2rem;
+}
+.appointment-date-range > i {
+	font-size: 1.5rem;
+}
+
+/* Week Days */
+.week-day {
+	background-color: white;
+	border-radius: 2rem;
+	padding: 0rem 2rem;
+	text-align: center;
+	margin: 0rem 1rem;
+}
+.week-day__title {
+	font-weight: bold;
+}
+.time-slot {
+	border-radius: 2rem;
+	padding: 0.5rem 0.75rem;
+}
+.available {
+	background-color: #79AAAB;
+	color: white;
+}
+.available:hover {
+	background-color: #3e8082;
+	cursor: pointer;
+}
+p.available.selected {
+	background-color: #FCAF58;
+	border: 2px solid black;
+}
+.book-appointment__link {
+	padding: 0.5rem 0.75rem;
+	border: 2px solid black;
+	display: inline-block;
+	text-align: center;
+	border-radius: 2rem;
+	margin-top: 2.5rem;
+}
+.book-appointment__link:hover {
+	background-color: #79AAAB;
+	color: white;
+}
